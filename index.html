@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Solicitud de iconos -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link rel="stylesheet" href="./public/css/output.css" />
+    <title>Dashboard Admin</title>
+  </head>
+  <body class="h-full grid relative lg:grid-cols-[15%_85%] text-white">
+    <aside id="menuDesktop" class="hidden h-full bg-primary lg:flex flex-col">
+      <div class="h-full">
+        <div class="flex h-[30%] items-center p-8">
+          <span class="material-symbols-rounded text-4xl"> dashboard </span>
+          <h2 class="text-2xl">Dashboard</h2>
+        </div>
+
+        <div class="h-[40%] flex flex-col justify-evenly p-8">
+          <div class="flex">
+            <span class="material-symbols-rounded"> home </span>
+
+            <strong>Inicio</strong>
+          </div>
+
+          <div class="flex">
+            <span class="material-symbols-rounded"> person </span>
+
+            <strong>Perfil</strong>
+          </div>
+
+          <div class="flex">
+            <span class="material-symbols-rounded"> mail </span>
+
+            <strong>Mensajes</strong>
+          </div>
+
+          <div class="flex">
+            <span class="material-symbols-rounded"> history </span>
+
+            <strong>Historial</strong>
+          </div>
+
+          <div class="flex">
+            <span class="material-symbols-rounded"> task </span>
+
+            <strong>Tareas</strong>
+          </div>
+
+          <div class="flex">
+            <span class="material-symbols-rounded"> group </span>
+
+            <strong>comunidad</strong>
+          </div>
+        </div>
+
+        <div class="flex h-[30%] justify-evenly flex-col p-8">
+          <div class="flex">
+            <span class="material-symbols-rounded"> settings </span>
+            <h2 class="font-semibold">Ajustes</h2>
+          </div>
+
+          <div class="flex">
+            <span class="material-symbols-rounded"> help </span>
+            <h2 class="font-semibold">Ayuda</h2>
+          </div>
+
+          <div class="flex">
+            <span class="material-symbols-rounded"> verified_user </span>
+            <h2 class="font-semibold">Privacidad</h2>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="h-full">
+      <nav
+        class="grid-cols-12 grid-rows-2 grid justify-end items-center h-[10%] lg:h-[20%] sombra "
+      >
+        <span class="material-symbols-rounded lg:hidden"> menu </span>
+
+        <div
+          class="flex col-start-2 gap-2 col-span-6 items-center pl-8 pt-4 text-black"
+        >
+          <span class="material-symbols-rounded"> search </span>
+          <input
+            type="text"
+            class="w-[90%] h-8 rounded-2xl font-semibold bg-terciary focus:outline-secondary"
+          />
+        </div>
+
+        <div
+          class="flex h-full items-center col-start-9 col-end-12 justify-evenly pt-4 text-black"
+        >
+          <span class="material-symbols-rounded cursor-pointer">
+            notifications
+          </span>
+          <img
+            src="./public/imgs/profilepic.jpg"
+            class="aspect-square h-[64px] border-4 border-secondary block w-[64px] rounded-[50%]"
+            alt="profile"
+          />
+          <h2 class="text-2xl font-bold">@GreyDev</h2>
+        </div>
+
+        <div
+          class="flex items-center gap-4 col-start-2 col-end-7 h-full col-span-2 pl-8 pr-8 pb-4 text-black"
+        >
+          <!-- <img src="./public/imgs/profilepic.jpg" class=" h-[70px]  block w-[70px] rounded-[50%]" alt="profile">  -->
+          <strong class="text-xl">
+            Hola! Grey, es bueno tenerte por aca nuevamente
+          </strong>
+        </div>
+
+        <div class="flex col-start-9 col-end-12 gap-4 text-white">
+          <button
+            class="pl-6 pr-6 pt-3 pb-3 font-semibold bg-primary rounded-3xl"
+          >
+            Nuevo
+          </button>
+
+          <button
+            class="pl-6 pr-6 pt-3 pb-3 font-semibold bg-primary rounded-3xl"
+          >
+            Actualizar
+          </button>
+
+          <button
+            class="pl-6 pr-6 pt-3 pb-3 font-semibold bg-primary rounded-3xl"
+          >
+            Compartir
+          </button>
+        </div>
+      </nav>
+
+      <div class="h-[80%] bg-terciary grid grid-cols-[3fr_1fr]">
+        <div class="grid grid-cols-2 grid-rows-[30px_1fr_1fr_1fr] gap-4 justify-center">
+          
+          <h2 class="p-4 text-2xl text-black font-semibold" >Tus Proyectos</h2>
+
+          
+
+        <div id="card" class="w-full flex justify-center p-4  col-start-1 col-end-2  row-start-2 row-end-3  ">
+            <div class="w-full bg-white rounded-xl flex sombraCard">
+              <div
+                class="h-full rounded-tl-xl rounded-bl-xl bg-secondary w-6"
+              ></div>
+
+              <div class="p-4 h-full flex flex-col justify-around ">
+                <h2 class="text-xl text-black font-bold">
+                  Super cool Proyecto
+                </h2>
+                <p class="text-gray-500 mt-3">
+                  Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin
+                  nibh erat, id facilisis felis accumsan nec.
+                </p>
+
+                <div class="flex justify-end gap-4" >
+                  <span class="material-symbols-rounded text-black cursor-pointer ">
+                    star
+                  </span>
+
+                  <span class="material-symbols-rounded text-black cursor-pointer ">
+                    visibility
+                  </span>
+
+                  <span class="material-symbols-rounded text-black cursor-pointer ">
+                    share
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <div id="card" class="w-full flex justify-center p-4 col-start-2 col-end-3  row-start-2 row-end-3   ">
+            <div class="w-full bg-white rounded-xl flex sombraCard">
+              <div
+                class="h-full rounded-tl-xl rounded-bl-xl bg-secondary w-6"
+              ></div>
+
+              <div class="p-4 h-full flex flex-col justify-around ">
+                <h2 class="text-xl text-black font-bold">
+                  Proyecto no tan cool
+                </h2>
+                <p class="text-gray-500 mt-3">
+                    Nullam condimentum ipsum ut lectus vehicula
+                    consectetur. Quisque sed dolor tincidunt,
+                    consectetur sapien et, facilisis dolor. Duis sem
+                    purus, dignissim ut sapien in, varius
+                    pellentesque lacus.
+                    
+                </p>
+
+                <div class="flex justify-end gap-4" >
+                  <span class="material-symbols-rounded text-black cursor-pointer ">
+                    star
+                  </span>
+
+                  <span class="material-symbols-rounded text-black cursor-pointer ">
+                    visibility
+                  </span>
+
+                  <span class="material-symbols-rounded text-black cursor-pointer ">
+                    share
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+           <div id="card" class="w-full flex justify-center p-4 col-start-1 col-end-2  row-start-3 row-end-4  ">
+            <div class="w-full bg-white rounded-xl flex sombraCard">
+              <div
+                class="h-full rounded-tl-xl rounded-bl-xl bg-secondary w-6"
+              ></div>
+
+              <div class="p-4 h-full flex flex-col justify-around ">
+                <h2 class="text-xl text-black font-bold">
+                  Proyecto Imposible
+                </h2>
+                <p class="text-gray-500 mt-3">
+                    In hac habitasse platea dictumst. Vivamus
+                    dictum rutrum arcu, a placerat velit sagittis
+                    id
+                </p>
+
+                <div class="flex justify-end gap-4" >
+                  <span class="material-symbols-rounded text-black cursor-pointer ">
+                    star
+                  </span>
+
+                  <span class="material-symbols-rounded text-black cursor-pointer ">
+                    visibility
+                  </span>
+
+                  <span class="material-symbols-rounded text-black cursor-pointer ">
+                    share
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="card" class="w-full flex justify-center p-4 col-start-2 col-end-3  row-start-3 row-end-4 ">
+            <div class="w-full bg-white rounded-xl flex sombraCard">
+              <div
+                class="h-full rounded-tl-xl rounded-bl-xl bg-secondary w-6"
+              ></div>
+
+              <div class="p-4 h-full flex flex-col justify-around ">
+                <h2 class="text-xl text-black font-bold">
+                  Proyecto Bien facil
+                </h2>
+                <p class="text-gray-500 mt-3">
+                    Etiam cursus eros ac efficitur fringilla.
+                    Vestibulum dignissim urna eget accumsan
+                    aliquam. Curabitur dignissim nisi in tortor
+                    commodo, ac bibendum magna tincidunt.
+                </p>
+
+                <div class="flex justify-end gap-4" >
+                  <span class="material-symbols-rounded text-black cursor-pointer ">
+                    star
+                  </span>
+
+                  <span class="material-symbols-rounded text-black cursor-pointer ">
+                    visibility
+                  </span>
+
+                  <span class="material-symbols-rounded text-black cursor-pointer ">
+                    share
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+           <div id="card" class="w-full flex justify-center p-4 col-start-1 col-end-2  row-start-4 row-end-5 ">
+            <div class="w-full bg-white rounded-xl flex sombraCard">
+              <div
+                class="h-full rounded-tl-xl rounded-bl-xl bg-secondary w-6"
+              ></div>
+
+              <div class="p-4 h-full flex flex-col justify-around ">
+                <h2 class="text-xl text-black font-bold">
+                  Ad blocker
+                </h2>
+                <p class="text-gray-500 mt-3">
+                    Quisque eget rutrum nisl. Nam augue
+                    justo, cursus vitae metus vel, pharetra
+                    hendrerit felis. Aliquam sed malesuada
+                    eros.
+                </p>
+
+                <div class="flex justify-end gap-4" >
+                  <span class="material-symbols-rounded text-black cursor-pointer ">
+                    star
+                  </span>
+
+                  <span class="material-symbols-rounded text-black cursor-pointer ">
+                    visibility
+                  </span>
+
+                  <span class="material-symbols-rounded text-black cursor-pointer ">
+                    share
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div> 
+
+         <div id="card" class="w-full flex justify-center p-4 col-start-2 col-end-3  row-start-4 row-end-5">
+            <div class="w-full bg-white rounded-xl flex sombraCard">
+              <div
+                class="h-full rounded-tl-xl rounded-bl-xl bg-secondary w-6"
+              ></div>
+
+              <div class="p-4 h-full flex flex-col justify-around ">
+                <h2 class="text-xl text-black font-bold">
+                  Creador de dinero
+                </h2>
+                <p class="text-gray-500 mt-3">
+                    Praesent convallis, libero quis congue
+                    elementum, nunc ante faucibus sapien, ac
+                    scelerisque tortor purus sit amet ex.
+                    Pellentesque mollis nec sem vel aliquam.
+                  
+                </p>
+
+                <div class="flex justify-end gap-4" >
+                  <span class="material-symbols-rounded text-black cursor-pointer ">
+                    star
+                  </span>
+
+                  <span class="material-symbols-rounded text-black cursor-pointer ">
+                    visibility
+                  </span>
+
+                  <span class="material-symbols-rounded text-black cursor-pointer ">
+                    share
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div> 
+
+
+
+
+
+          
+        </div>  
+
+        <div class="grid grid-rows-[60px_1fr_1fr]  items-center gap-4  "> 
+          
+          <h2 class="p-4 text-2xl text-black font-semibold text-center" >Anuncios</h2>
+          
+          <div class=" h-full flex items-center justify-center  ">
+
+            <div class="h-full flex flex-col justify-between w-4/5  bg-white rounded-lg p-3 " >
+             
+              <div class=" border-b-4 text-black  "  >
+                  <h5 class="font-bold   pt-2 pl-2 pr-2  " >Sitio en mantenimiento</h5>
+                  <p class="text-gray-500  pl-2 pr-2 mb-3" >Vestibulum condimentum tellus lacus,
+                    accumsan elit maximus ac. Donec
+                    hendrerit sodales congue.
+                  </p>
+              </div>
+
+
+              <div class=" border-b-4 text-black  "  >
+                <h5 class="font-bold   pt-2 pl-2 pr-2  " >Sitio en mantenimiento</h5>
+                <p class="text-gray-500  pl-2 pr-2 mb-3" >Vestibulum condimentum tellus lacus,
+                  accumsan elit maximus ac. Donec
+                  hendrerit sodales congue.
+                </p>
+            </div>
+
+
+            </div>
+
+
+          </div>
+
+
+
+          <div class=" h-full flex flex-col items-center justify-center  mb-8  ">
+            <h3 class=" pt-2  text-2xl text-black font-semibold " >Tendencias</h3>
+              <div class="h-full  text-black   w-4/5  bg-white rounded-lg  justify-evenly text-2xl  p-3  flex flex-col " >
+                <h6 class="font-semibold" >#reina</h6>
+                <h6 class="font-semibold" >#Corona</h6>
+                <h6 class="font-semibold" >#chisme</h6>
+                <h6 class="font-semibold" >#nasa</h6>
+                <h6 class="font-semibold" >#CIA</h6>
+
+              
+
+              </div>
+
+
+          </div>
+
+          
+
+          
+
+
+        </div>
+      </div>
+    </main>
+
+    <aside
+      id="menuMobile"
+      class="absolute top-0 right-0 lg:hidden bg-primary h-full w-3/4 flex"
+    ></aside>
+  </body>
+</html>
